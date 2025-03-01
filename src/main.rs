@@ -1,6 +1,7 @@
-// src/main.rs
+mod messages;  // Importa il modulo messages
 
 use std::io;
+use messages::message::Message;
 
 struct TodoItem {
     id: u64,
@@ -53,8 +54,15 @@ impl TodoList {
 fn main() {
     let mut todo_list = TodoList::new();
 
+    let mas = Message {
+        message : "Hello, world!".to_string(),
+        author : "Alice".to_string(),
+    };
+
+    println!("Message: {} author: {}", mas.message, mas.author);
+
     loop {
-        println("Choose operation:")
+        println!("Choose operation:");
         println!("1. Add Item");
         println!("2. List Items");
         println!("3. Complete Item");
