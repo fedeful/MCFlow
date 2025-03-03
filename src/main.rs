@@ -54,7 +54,7 @@ fn main() {
     let mut todo_list = TodoList::new();
 
     loop {
-        println("Choose operation:")
+        println!("Choose operation:");
         println!("1. Add Item");
         println!("2. List Items");
         println!("3. Complete Item");
